@@ -17,4 +17,19 @@ public class ConverterTest {
         assertEquals("III", arabicToRoman(3));
     }
 
+    @Test
+    void convert4ToIV() {
+        assertEquals("IV", arabicToRoman(4));
+    }
+
+    @Test
+    void convert5ToV() {
+        assertEquals("V", arabicToRoman(5));
+    }
+
+    @Test
+    void convert6ToVI() {
+        assertEquals("VI", arabicToRoman(6));
+    }
+
 }
