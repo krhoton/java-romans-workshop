@@ -7,7 +7,17 @@ public class Converter {
         if(num<=0){
             throw new Exception("El número debe ser mayor que 0");
         }
-        if(num >= 10 && num <= 19){
+        if(num >= 50 && num <=59){
+            result.append("L");
+            num -= 50;
+        }
+
+        if(num >= 40 && num <=49){
+            result.append("XL");
+            num -= 40;
+        }
+
+        while (num >= 10 && num <= 39) {
             result.append("X");
             num -= 10;
         }

@@ -53,6 +53,21 @@ public class ConverterTest {
     }
 
     @Test
+    void convert39ToXXXIX() throws Exception {
+        assertEquals("XXXIX", arabicToRoman(39));
+    }
+
+    @Test
+    void convert49ToXLIX() throws Exception {
+        assertEquals("XLIX", arabicToRoman(49));
+    }
+
+    @Test
+    void convert55ToLV() throws Exception {
+        assertEquals("LV", arabicToRoman(55));
+    }
+
+    @Test
     void errorConverting0(){
         Exception ex =  assertThrows(Exception.class, ()-> arabicToRoman(0));
         assertEquals("El número debe ser mayor que 0", ex.getMessage());
