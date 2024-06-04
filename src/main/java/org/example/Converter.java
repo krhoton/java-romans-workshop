@@ -2,9 +2,11 @@ package org.example;
 
 public class Converter {
 
-    public static String arabicToRoman(int num) {
+    public static String arabicToRoman(int num) throws Exception {
         StringBuilder result = new StringBuilder();
-
+        if(num<=0){
+            throw new Exception("El número debe ser mayor que 0");
+        }
         if(num >= 5 && num <= 8) {
             result.append("V");
             num -= 5;
