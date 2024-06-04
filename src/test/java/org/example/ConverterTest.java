@@ -68,6 +68,16 @@ public class ConverterTest {
     }
 
     @Test
+    void convert1476ToMCDLXXVI() throws Exception {
+        assertEquals("MCDLXXVI", arabicToRoman(1476));
+    }
+
+    @Test
+    void convert3999ToMMMCMXCIX() throws Exception {
+        assertEquals("MMMCMXCIX", arabicToRoman(3999));
+    }
+
+    @Test
     void errorConverting0(){
         Exception ex =  assertThrows(Exception.class, ()-> arabicToRoman(0));
         assertEquals("El número debe ser mayor que 0", ex.getMessage());
@@ -79,4 +89,9 @@ public class ConverterTest {
         assertEquals("El número debe ser mayor que 0", ex.getMessage());
     }
 
+    @Test
+    void errorConvertingHigherOrEquals4000(){
+        Exception ex =  assertThrows(Exception.class, ()-> arabicToRoman(4000));
+        assertEquals("El número debe ser menor que 4000", ex.getMessage());
+    }
 }
